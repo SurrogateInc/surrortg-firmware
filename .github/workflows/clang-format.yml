@@ -1,0 +1,21 @@
+name: Run clang-format
+ 
+on: [push]
+
+jobs:
+  clang-format:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install clang-format
+        run: sudo apt-get update && sudo apt-get install clang-format
+
+      - name: Run clang-format
+        run: |
+          find . -type f \( -name \*.cpp -o -name \*.h -o -name \*.ino \) \
+            -exec sh -c 'for n; \
+            do clang-format --style=file --verbose --Werror --dry-run "$n" || exit 1; \
+            done' sh {} +
