@@ -1,0 +1,24 @@
+# Syntax Coloring Map For SurroRTG
+# USE ONLY TABS IN BETWEEN THE KEYWORD AND TYPE, NO SPACES!!!
+
+# Datatypes
+
+SRTG	KEYWORD1
+AppServer	KEYWORD1
+CommandCallback	KEYWORD1
+SdkCallbacks	KEYWORD1
+UdpCommands	KEYWORD1
+
+reboot_count	DATA_TYPE
+reboot_counter	DATA_TYPE
+
+# Methods and Functions
+
+setup_sdk	RESERVED_WORD
+setup_app_server	RESERVED_WORD
+process_sdk	RESERVED_WORD
+process_app_server	RESERVED_WORD
+send_udp_response	RESERVED_WORD
+m5_rover_init	RESERVED_WORD
+m5_rover_init	RESERVED_WORD
+m5_send_iic	RESERVED_WORD
